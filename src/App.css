@@ -1,0 +1,35 @@
+html {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.75;
+}
+  
+h1 {
+    font-size: 1.802rem;
+    font-family: 'Atma', cursive;
+}
+
+.App {
+    min-height: 100vh;
+    margin: 0 0 100px 0;
+}
+
+.about-imgs {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+.external-link {
+    color: #FA8000;
+    text-decoration: none;
+}
+
+.external-link:hover {
+    color: #0E5C06;
+}
+
+.external-link:visited {
+    color: #5C8F2E;
+}

@@ -1,0 +1,14 @@
+.fullImg {
+    max-width: 300px;
+    height: auto;
+    margin: 30px 30px 30px 0;
+}
+
+.info {
+    margin: 30px 0;
+}
+
+.img-list {
+    width: 40px;
+    height: 40px;
+}

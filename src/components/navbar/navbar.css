@@ -1,0 +1,18 @@
+#nav-logo {
+    max-height: 60px;
+    width: auto;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: black !important;
+}
+
+.nav-link:hover {
+    font-weight: bolder;
+    color: #FA8000 !important;
+}
+
+.nav-logo:hover {
+    scale: 1.2;
+}

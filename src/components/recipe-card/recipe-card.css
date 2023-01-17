@@ -1,0 +1,14 @@
+.card-button {
+    font-weight: bold !important;
+    border: none !important;
+    background-color: #FA8000 !important;
+}
+
+.card-button:hover {
+    background-color: #0E5C06 !important;
+}
+
+.card-link {
+    text-decoration: none !important;
+    color: white !important;
+}

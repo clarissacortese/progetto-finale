@@ -1,0 +1,29 @@
+Label {
+    font-weight: bold;
+}
+
+.email-form {
+    border: 2px solid #0E5C06;
+    padding: 40px;
+    border-radius: 20px;
+    background-color: white;    
+}
+
+.button {
+    background-color: #FA8000 !important;
+    font-weight: bold !important;
+    color: white !important;
+    border: none !important;
+    max-width: 200px;
+}
+
+.button:hover {
+    background-color: #0E5C06 !important;
+}
+
+.background-form {
+    height: 80vh;
+    background-image: url("../../imgs/pattern.png");
+    background-repeat: repeat;
+    background-size: 500px 500px;
+}
