@@ -31,7 +31,8 @@ export default function SelectedRecipe() {
 
     const fetchSimilar = useCallback(async () => {
       try {
-        const { data } = await axios.get(`https://api.spoonacular.com/recipes/${params.name}/similar?apiKey=883cb363850848bb9b9ba31691def89a`);
+        const { data } = await axios.get(
+        `https://api.spoonacular.com/recipes/${params.name}/similar?apiKey=883cb363850848bb9b9ba31691def89a`);
         setSimilar(data);
       } catch (error) {
         console.error(error);

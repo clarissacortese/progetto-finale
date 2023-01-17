@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import {useState, useEffect} from 'react';
 import SearchBar from '../searchBar/searchBar';
 import RecipeCard from '../recipe-card/recipe-card';
 import axios from 'axios';
@@ -38,7 +38,9 @@ export default function SearchedRecipesApi() {
          <div className="d-flex flex-wrap justify-content-center">
          {data.map((item) => {
             return (
-              <RecipeCard key={_.get(item, 'id', 'N/A')} title={_.get(item, 'title', 'sorry, something went wron')} id={_.get(item, 'id', 'N/A')}
+              <RecipeCard key={_.get(item, 'id', 'N/A')}
+              title={_.get(item, 'title', 'sorry, something went wron')}
+              id={_.get(item, 'id', 'N/A')}
               img={`https://spoonacular.com/recipeImages/${_.get(item, 'id', 'N/A')}-556x370.jpg`}
               />
           );
