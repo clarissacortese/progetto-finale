@@ -1,12 +1,12 @@
 import {Card, CardImg, CardBody, CardTitle,
-       CardSubtitle, Button} from "reactstrap";
+       CardSubtitle} from "reactstrap";
+import MyButton from "../atoms/button/button";
 import {Link} from "react-router-dom";
-import "./recipe-card.css";
 
 export default function RecipeCard(props) {
   return (
     <div>
-        <Card style={{width: "16rem", margin: "20px"}}>
+        <Card style={{width: "16rem", margin: "20px", textDecoration: "none"}}>
             <CardImg
             alt={props.title}
             src={props.img}
@@ -18,8 +18,8 @@ export default function RecipeCard(props) {
                 <CardSubtitle
                 className="mb-2 text-muted"
                 tag="h6">Vegetarian recipe</CardSubtitle>
-                <Button className="card-button"><Link className="card-link"
-                to={"/recipe/" + props.id}>Read More</Link></Button>
+                <Link className="card-link"
+                to={"/recipe/" + props.id}><MyButton text="Read More" /></Link>
             </CardBody>
         </Card>      
     </div>

@@ -6,16 +6,15 @@ export default function RandomRecipes() {
 
     const [randomData, setRandomData] = useState([]);
     
-    useEffect(() => {
-        getRandomRecipes();
-    }, []);
-
     const getRandomRecipes = async () => {
-            const api = await fetch(
-            'https://api.spoonacular.com/recipes/random?apiKey=883cb363850848bb9b9ba31691def89a&number=8&tags=vegetarian');
-            const data = await api.json();
-            setRandomData(data.recipes);
-    }   
+      const api = await fetch(`https://api.spoonacular.com/recipes/random?apiKey=${process.env.REACT_APP_API_KEY}&number=8&tags=vegetarian`);
+      const data = await api.json();
+      setRandomData(data.recipes);
+    };
+    
+    useEffect(() => {
+      getRandomRecipes();
+  }, []);
   
   return (
     <div className="my-5">

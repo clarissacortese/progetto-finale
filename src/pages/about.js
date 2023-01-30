@@ -1,5 +1,6 @@
 import SpoonacularLogo from "../imgs/spoonacular-logo.svg";
 import Food from "../imgs/food.jpg";
+import Image from "../components/atoms/image";
 
 export default function About() {
   return (
@@ -8,7 +9,7 @@ export default function About() {
       padding: "20px"
     }}>
       <div className="d-flex align-items-center flex-wrap">
-        <img className="about-imgs m-2" src={SpoonacularLogo} alt="Spoonacular logo"/>
+        <Image src={SpoonacularLogo} alt="Spoonacular logo"/>
         <p className="m-3" style={{width: "80%"}}><a href="https://spoonacular.com/food-api" target="_blank" rel="noreferrer" className="external-link">Spoonacular's API</a> provides access to thousands of recipes,
         based on the user's varied nutritional requirements and other specific needs.
         This API is curated in detail and rich in information.
@@ -20,7 +21,7 @@ export default function About() {
         according to specific parameters, chosen by the user,
         with the ultimate goal of making it faster and more fun to approach the vegetarian lifestyle.
         </p>
-        <img className="about-imgs m-2" src={Food} alt="Vegetarian food"/>
+        <Image src={Food} alt="Vegetarian food"/>
       </div>
     </div>   
   )

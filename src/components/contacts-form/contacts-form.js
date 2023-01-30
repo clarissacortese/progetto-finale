@@ -2,6 +2,7 @@ import {useRef} from 'react';
 import emailjs from '@emailjs/browser';
 import "./contacts-form.css";
 import {Label, Input, FormGroup} from "reactstrap";
+import MyButton from '../atoms/button/button';
 
 export default function ContactsForm () {
   const form = useRef();
@@ -49,7 +50,7 @@ export default function ContactsForm () {
               required
             />
         </FormGroup>
-        <Input type="submit" value="SEND" className="button mx-auto" />
+        <MyButton text="SEND" style={{width: "100%"}} />
     </form>
     </div>
   );

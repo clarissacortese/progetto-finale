@@ -1,5 +1,6 @@
 import {useState} from 'react';
 import "./searchBar.css"
+import MyButton from '../atoms/button/button';
 
 export default function SearchBar({ onSearch }) {
   
@@ -25,7 +26,11 @@ export default function SearchBar({ onSearch }) {
       value={inputValue}
       onChange={handleChange}
     />
-    <button type="submit" className="searchButton">Search</button>
+    <MyButton text="Search" className="searchButton" style={{
+      borderRadius: "0 20px 20px 0",
+      width: "14%",
+      marginLeft: "-1px",
+    }}/>
     </form>
     </div>
   )

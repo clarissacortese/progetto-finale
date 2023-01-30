@@ -1,12 +1,12 @@
 import "./footer.css";
-import logo from "../../imgs/logo.png";
+import Logo from "../atoms/logo";
 import {Link} from "react-router-dom";
 
 export default function Footer() {
   return (
     <footer className="footer py-3 mt-auto">
       <div className="container-fluid d-flex justify-content-center">
-        <Link to="/"><img src={logo} height="40" alt="logo" /></Link>
+        <Link to="/"><Logo height="40px" width="auto"/></Link>
       </div>
     </footer>
   )

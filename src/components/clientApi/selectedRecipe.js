@@ -7,6 +7,8 @@ import RecipeCard from '../recipe-card/recipe-card';
 
 export default function SelectedRecipe() {
 
+  const API_KEY = process.env.REACT_APP_API_KEY;
+
     let params = useParams();
     const [details, setDetails] = useState({});
     const [similar, setSimilar] = useState([]);
@@ -18,7 +20,7 @@ export default function SelectedRecipe() {
         setLoadingDetails(true);
         const { data } = await axios.get(`https://api.spoonacular.com/recipes/${params.name}/information`, {
           params: {
-            apiKey: '883cb363850848bb9b9ba31691def89a'
+            apiKey: API_KEY
           }
         });
         setDetails(data);
@@ -27,17 +29,17 @@ export default function SelectedRecipe() {
         setFetchDetailsError(error);
       } finally {
         setLoadingDetails(false);
-      }}, [params.name]);
+      }}, [API_KEY, params.name]);
 
     const fetchSimilar = useCallback(async () => {
       try {
         const { data } = await axios.get(
-        `https://api.spoonacular.com/recipes/${params.name}/similar?apiKey=883cb363850848bb9b9ba31691def89a`);
+        `https://api.spoonacular.com/recipes/${params.name}/similar?apiKey=${API_KEY}`);
         setSimilar(data);
       } catch (error) {
         console.error(error);
       }
-    }, [params.name])
+    }, [API_KEY, params.name])
 
     useEffect(() => {
         fetchDetails();     

@@ -5,6 +5,7 @@ import axios from 'axios';
 import _ from "lodash";
 
 export default function SearchedRecipesApi() {
+  const API_KEY = process.env.REACT_APP_API_KEY;
     const [searchValue, setSearchValue] = useState('');
     const [data, setData] = useState([]);
 
@@ -13,7 +14,7 @@ export default function SearchedRecipesApi() {
         try {
           const response = await axios.get(`https://api.spoonacular.com/recipes/complexSearch`, {
             params: {
-              apiKey: '883cb363850848bb9b9ba31691def89a',
+              apiKey: API_KEY,
               diet: 'vegetarian',
               query: searchValue
             }
@@ -24,7 +25,7 @@ export default function SearchedRecipesApi() {
         }
       }
       fetchData();
-    }, [searchValue]);
+    }, [API_KEY, searchValue]);
 
     const handleSearch = (value) => {
       setSearchValue(value);

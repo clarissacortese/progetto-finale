@@ -9,18 +9,6 @@ Label {
     background-color: white;    
 }
 
-.button {
-    background-color: #FA8000 !important;
-    font-weight: bold !important;
-    color: white !important;
-    border: none !important;
-    max-width: 200px;
-}
-
-.button:hover {
-    background-color: #0E5C06 !important;
-}
-
 .background-form {
     height: 80vh;
     background-image: url("../../imgs/pattern.png");

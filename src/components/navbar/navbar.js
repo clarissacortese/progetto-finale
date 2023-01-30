@@ -8,7 +8,7 @@ import {
   Collapse,
   NavbarToggler
 } from 'reactstrap';
-import logo from "../../imgs/logo.png";
+import Logo from '../atoms/logo';
 
 export default function Menu(args) {
   const [isOpen, setIsOpen] = useState(false);
@@ -17,7 +17,7 @@ export default function Menu(args) {
   return (
   <div className="px-5">
   <Navbar {...args}>
-    <Link to="/"><img alt="logo" src={logo} id="nav-logo" className="nav-logo" /></Link>
+    <Link to="/"><Logo height="60px" width="auto"/></Link>
     <NavbarToggler onClick={toggle} />
     <Collapse isOpen={isOpen} navbar>
     <Nav className="ms-auto" navbar>
