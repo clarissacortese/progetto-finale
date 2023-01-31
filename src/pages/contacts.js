@@ -1,7 +1,5 @@
-import ContactsForm from '../components/contacts-form/contacts-form';
+import Form from "../components/contactsForm/contactsForm";
 
 export default function Contacts() {
-  return (
-    <ContactsForm />
-  )
+  return <Form />;
 }

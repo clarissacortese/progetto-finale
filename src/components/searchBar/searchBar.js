@@ -1,37 +1,38 @@
-import {useState} from 'react';
-import "./searchBar.css"
-import MyButton from '../atoms/button/button';
+import { useState } from "react";
+import MyButton from "../atoms/button/button";
+import SearchBarInput from "./searchBarInput";
 
-export default function SearchBar({ onSearch }) {
-  
-  const [inputValue, setInputValue] = useState('');
-
-  const handleChange = (event) => {
-    setInputValue(event.target.value);
-  }
+const SearchBar = ({ onSearch }) => {
+  const [inputValue, setInputValue] = useState("");
 
   const handleSubmit = (event) => {
     event.preventDefault();
     onSearch(inputValue);
-  }
+  };
 
   return (
     <div className="mx-auto my-5">
-    <h2 className="text-center">Let's search!</h2>
-    <br />
-    <form onSubmit={handleSubmit} className="mx-5 d-flex justify-content-center">
-    <input className="searchBar"
-      name="search"
-      type="search"
-      value={inputValue}
-      onChange={handleChange}
-    />
-    <MyButton text="Search" className="searchButton" style={{
-      borderRadius: "0 20px 20px 0",
-      width: "14%",
-      marginLeft: "-1px",
-    }}/>
-    </form>
+      <h2 className="text-center">Let's search!</h2>
+      <br />
+      <form
+        onSubmit={handleSubmit}
+        className="mx-5 d-flex justify-content-center">
+        <SearchBarInput
+          value={inputValue}
+          onChange={(e) => setInputValue(e.target.value)}
+        />
+        <MyButton
+          text="Search"
+          id="searchButton"
+          style={{
+            borderRadius: "0 20px 20px 0",
+            width: "fit-content",
+            marginLeft: "-1px",
+          }}
+        />
+      </form>
     </div>
-  )
-}
+  );
+};
+
+export default SearchBar;

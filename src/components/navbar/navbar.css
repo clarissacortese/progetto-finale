@@ -1,9 +1,9 @@
 .nav-link {
-    text-decoration: none;
-    color: black !important;
+  text-decoration: none;
+  color: black !important;
 }
 
 .nav-link:hover {
-    font-weight: bolder;
-    color: #FA8000 !important;
+  font-weight: bolder;
+  color: #fa8000 !important;
 }

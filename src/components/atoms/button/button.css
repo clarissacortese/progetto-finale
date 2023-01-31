@@ -1,11 +1,11 @@
 .button {
-    height: 40px;
-    font-weight: bold !important;
-    border: none !important;
-    background-color: #FA8000 !important;
-    color: white !important;
+  height: 40px;
+  font-weight: bold !important;
+  border: none !important;
+  background-color: #fa8000 !important;
+  color: white !important;
 }
 
 .button:hover {
-    background-color: #0E5C06 !important;
+  background-color: #0e5c06 !important;
 }

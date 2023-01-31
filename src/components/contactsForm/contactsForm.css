@@ -1,0 +1,13 @@
+.email-form {
+  border: 2px solid #0e5c06;
+  padding: 40px;
+  border-radius: 20px;
+  background-color: white;
+}
+
+.background-form {
+  height: 80vh;
+  background-image: url("../../imgs/pattern.png");
+  background-repeat: repeat;
+  background-size: 500px 500px;
+}

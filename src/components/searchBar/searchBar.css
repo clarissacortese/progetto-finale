@@ -1,25 +1,13 @@
-.searchButton {
-
-    border-radius: 0 20px 20px 0;
-    width: 14%;
-    margin-left: -1px;
-}
-
-
 .searchBar {
-    height: 40px;
-    border: 1px solid grey;
-    border-radius: 20px 0 0 20px;
-    padding-left: 20px;
-    width: 56%;
+  height: 40px;
+  border: 1px solid grey;
+  border-radius: 20px 0 0 20px;
+  padding-left: 20px;
+  width: 56%;
 }
 
 @media only screen and (width < 600px) {
-    .searchButton {
-        width: 30%;
-    }
-
-    .searchBar {
-        width: 70%;
-    }
+  .searchBar {
+    width: 70%;
+  }
 }

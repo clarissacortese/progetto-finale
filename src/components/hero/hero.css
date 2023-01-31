@@ -1,16 +1,16 @@
 .background {
-    background-image: url("../../imgs/background.jpg");
-    background-position: center;
-    background-repeat: no-repeat;
-    height: 250px;
-    background-size: cover;
+  background-image: url("../../imgs/background.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 250px;
+  background-size: cover;
 }
 
 .hero {
-    background-color: rgba(92, 143, 46, 0.5);
-    color: white;
-    border-radius: 30px;
-    backdrop-filter: blur(2px);
-    text-shadow: 0px 0px 5px #062402;
-    padding: 4px;
+  background-color: rgba(92, 143, 46, 0.5);
+  color: white;
+  border-radius: 30px;
+  backdrop-filter: blur(2px);
+  text-shadow: 0px 0px 5px #062402;
+  padding: 4px;
 }
