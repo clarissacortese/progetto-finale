@@ -10,7 +10,7 @@ export default function Menu(args) {
 
   return (
     <div className="px-5">
-      <Navbar {...args}>
+      <Navbar {...args} className="navbar-expand-md">
         <Link to="/">
           <Logo height="60px" width="auto" />
         </Link>

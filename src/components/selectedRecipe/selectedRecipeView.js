@@ -2,7 +2,7 @@ import _ from "lodash";
 import Time from "../../imgs/time.png";
 import Servings from "../../imgs/servings.png";
 
-export default function SelectedRecipeView({ details }) {
+export default function SelectedRecipeView({details}) {
   return (
     <div>
       <h2>{_.get(details, "title", "sorry, something went wrong")}</h2>

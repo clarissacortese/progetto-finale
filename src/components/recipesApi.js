@@ -15,6 +15,21 @@ export async function getRandomRecipes() {
   return response.data.recipes;
 }
 
+export async function getSearchedRecipes() {
+  const response = await axios.get(
+    `https://api.spoonacular.com/recipes/random`,
+    {
+      params: {
+        apiKey: process.env.REACT_APP_API_KEY,
+        number: 8,
+        tags: "vegetarian",
+      },
+    }
+  );
+
+  return response.data.recipes;
+}
+
 export async function getRecipeDetails(name) {
   const { data } = await axios.get(
     `https://api.spoonacular.com/recipes/${name}/information`,
@@ -46,4 +61,5 @@ export default {
   getRandomRecipes,
   getRecipeDetails,
   getSimilarRecipes,
+  getSearchedRecipes
 };

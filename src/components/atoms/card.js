@@ -12,7 +12,7 @@ export default function MyCard(props) {
           <CardSubtitle className="mb-2 text-muted" tag="h6">
             Vegetarian recipe
           </CardSubtitle>
-          <Link className="card-link" to={"/recipe/" + props.id}>
+          <Link className="card-link" key={props.id} to={"/recipe/" + props.id}>
             <MyButton text="Read More" />
           </Link>
         </CardBody>

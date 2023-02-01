@@ -1,7 +1,7 @@
 import Form from "./contactsForm";
 
 
-const ContactsForm = () => {
+const ContactsForm = ({sendEmail}) => {
   
 
   return (

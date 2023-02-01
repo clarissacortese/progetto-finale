@@ -2,7 +2,7 @@ import "./selectedRecipe.css";
 import _ from "lodash";
 import MyCard from "../atoms/card";
 
-export default function SelectedSimilarView({ similar }) {
+export default function SelectedSimilarView({similar}) {
   return (
     <div>
       <h4 className="mt-5">Similar recipes:</h4>
