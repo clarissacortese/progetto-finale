@@ -1,6 +1,7 @@
 import _ from "lodash";
 import Time from "../../imgs/time.png";
 import Servings from "../../imgs/servings.png";
+import "./selectedRecipe.css";
 
 export default function SelectedRecipeView({details}) {
   return (
@@ -13,14 +14,14 @@ export default function SelectedRecipeView({details}) {
           alt={_.get(details, "title", "sorry, something went wrong")}></img>
         <div className="info d-flex flex-column justify-content-around">
           <div className="d-flex">
-            <img src={Servings} className="img-list me-2" alt="servings"></img>
+            <img src={Servings} className="me-2" id="img-list1" alt="servings"></img>
             <p className="mt-2">
               <strong>Servings: </strong>
               {_.get(details, "servings", "unspecified")}
             </p>
           </div>
           <div className="d-flex">
-            <img src={Time} className="img-list me-2" alt="time"></img>
+            <img src={Time} className="me-2" id="img-list2" alt="time"></img>
             <p className="mt-2">
               <strong>Ready in minutes: </strong>
               {_.get(details, "readyInMinutes", "unspecified")}

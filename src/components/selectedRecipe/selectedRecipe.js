@@ -1,37 +1,20 @@
-import { useEffect, useState, useCallback } from "react";
-import { useParams } from "react-router-dom";
 import SelectedRecipeView from "./selectedRecipeView";
 import SelectedSimilarView from "./selectedSimilarView";
-import recipesApi from "../recipesApi";
-import "./selectedRecipe.css";
+import { Await, useLoaderData } from "react-router-dom";
 
 export default function SelectedRecipe() {
-  let params = useParams();
-  let name = params.name;
-
-  const [details, setDetails] = useState({});
-  const [similar, setSimilar] = useState([]);
-
-  const getRecipesDetails = useCallback(async () => {
-    setDetails(await recipesApi.getRecipeDetails(name));
-  }, [setDetails, name]);
-
-  useEffect(() => {
-    getRecipesDetails();
-  }, [getRecipesDetails]);
-
-  const getSimilarRecipes = useCallback(async () => {
-    setSimilar(await recipesApi.getSimilarRecipes(name));
-  }, [setSimilar, name]);
-
-  useEffect(() => {
-    getSimilarRecipes();
-  }, [getSimilarRecipes]);
+  const {details, similar} = useLoaderData();
 
   return (
     <div className="mx-5 my-5 d-flex flex-column full-recipe">
+      <Await resolve={details}
+        errorElement={<div>There are no instructions for this recipe, sorry</div>}>
       <SelectedRecipeView details={details} />
+      </Await>
+      <Await resolve={similar}
+        errorElement={<div>We couldn't find any similar recipes to recommend you</div>}>
       <SelectedSimilarView similar={similar} />
+      </Await>
     </div>
   );
 }

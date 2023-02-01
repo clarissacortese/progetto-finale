@@ -10,7 +10,11 @@ import About from "./pages/about";
 import Contacts from "./pages/contacts";
 import Recipe from "./pages/recipe";
 import RootLayout from "./pages/rootLayout";
-import { getRandomRecipes } from "./components/recipesApi";
+import {
+  getRandomRecipes,
+  getRecipeDetails,
+  getSimilarRecipes,
+} from "./components/recipesApi";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -18,7 +22,16 @@ const router = createBrowserRouter(
       <Route index element={<Home />} loader={getRandomRecipes} />
       <Route path="/about" element={<About />} />
       <Route path="/contacts" element={<Contacts />} />
-      <Route path="/recipe/:name" element={<Recipe />} />
+      <Route
+        path="/recipe/:name"
+        element={<Recipe />}
+        loader={async function loaderRecipeDetails({ params }) {
+          return {
+            details: await getRecipeDetails(params.name),
+            similar: await getSimilarRecipes(params.name),
+          };
+        }}
+      />
     </Route>
   )
 );
